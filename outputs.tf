@@ -1,3 +1,7 @@
+output "data_factory_credential_user_managed_identities_id" {
+  description = "Map of id values across all data_factory_credential_user_managed_identities, keyed the same as var.data_factory_credential_user_managed_identities"
+  value       = { for k, v in azurerm_data_factory_credential_user_managed_identity.data_factory_credential_user_managed_identities : k => v.id }
+}
 output "data_factory_credential_user_managed_identities_annotations" {
   description = "Map of annotations values across all data_factory_credential_user_managed_identities, keyed the same as var.data_factory_credential_user_managed_identities"
   value       = { for k, v in azurerm_data_factory_credential_user_managed_identity.data_factory_credential_user_managed_identities : k => v.annotations }
